@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
-import { Sparkles, Layers, Filter } from "lucide-react";
+import { Layers, Filter } from "lucide-react";
 
 /**
  * ProductsServices Component
@@ -69,9 +69,6 @@ export default function ProductsServices({ products, onSelectProduct, selectedPr
 
       {/* Callout Notice for Developers & Students */}
       <div className="creator-spotlight-banner">
-        <div className="banner-icon-side">
-          <Sparkles size={32} className="text-accent-yellow" />
-        </div>
         <div className="banner-text-side">
           <h4 className="banner-title">Are you a Filipino Game Developer or Student Studio?</h4>
           <p className="banner-description">

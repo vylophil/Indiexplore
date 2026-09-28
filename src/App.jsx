@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import Navbar from "./components/Navbar";
 import BusinessProfile from "./components/BusinessProfile";
 import ProductsServices from "./components/ProductsServices";
@@ -9,8 +9,9 @@ import BusinessFeatures from "./components/BusinessFeatures";
 import SubscriptionPlans from "./components/SubscriptionPlans";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
-import TrialModal from "./components/TrialModal";
 import "./App.css";
+
+const TrialModal = lazy(() => import("./components/TrialModal"));
 
 // Import Centralized Business Data
 import {
@@ -128,11 +129,15 @@ export default function App() {
       <Footer businessInfo={businessInfo} />
 
       {/* Interactive Free Trial / Subscription Activation Modal */}
-      <TrialModal
-        isOpen={isTrialOpen}
-        onClose={handleCloseTrial}
-        selectedPlan={selectedPlanForTrial}
-      />
+      {isTrialOpen && (
+        <Suspense fallback={null}>
+          <TrialModal
+            isOpen={isTrialOpen}
+            onClose={handleCloseTrial}
+            selectedPlan={selectedPlanForTrial}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }

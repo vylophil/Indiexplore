@@ -1,5 +1,5 @@
 import React from "react";
-import { Star, Play, MapPin, Eye } from "lucide-react";
+import { Play, MapPin, Eye } from "lucide-react";
 
 /**
  * GameCard Component
@@ -14,6 +14,7 @@ export default function GameCard({ game, onSelectGame }) {
           alt={game.title}
           className="game-cover-image"
           loading="lazy"
+          decoding="async"
           onError={(e) => { e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' fill='%23141924'%3E%3Crect width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2364748b' font-family='sans-serif' font-size='16'%3EImage Unavailable%3C/text%3E%3C/svg%3E"; }}
         />
         <div className="game-card-overlay">
@@ -30,10 +31,6 @@ export default function GameCard({ game, onSelectGame }) {
 
         <div className="game-card-top-badges">
           <span className="genre-pill">{game.genre}</span>
-          <span className="rating-pill">
-            <Star size={12} className="star-icon" />
-            {game.rating}
-          </span>
         </div>
 
         {game.spotlight && (

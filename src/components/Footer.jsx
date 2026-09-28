@@ -1,5 +1,5 @@
 import React from "react";
-import { Gamepad2, Heart, ExternalLink, Sparkles, Shield, ArrowUp } from "lucide-react";
+import { Gamepad2, Heart, ExternalLink, Shield, ArrowUp } from "lucide-react";
 
 /**
  * Footer Component
@@ -73,7 +73,6 @@ export default function Footer({ businessInfo }) {
         {/* Right Column: Academic Project & Student Credits */}
         <div className="footer-col academic-col">
           <div className="academic-badge">
-            <Sparkles size={14} className="text-accent-yellow" />
             <span>Academic Capstone Portfolio</span>
           </div>
           <h4 className="footer-heading">Project Authors</h4>

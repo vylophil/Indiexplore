@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { X, Star, Play, Check, ShieldCheck, MapPin, Gamepad2, Sparkles } from "lucide-react";
+import { X, Play, Check, ShieldCheck, MapPin, Gamepad2 } from "lucide-react";
 
 /**
  * GameModal Component
@@ -55,14 +55,11 @@ export default function GameModal({ game, onClose, onSelectPass }) {
         </button>
 
         <div className="modal-header-media">
-          <img src={game.image} alt={game.title} className="modal-cover-img" />
+          <img src={game.image} alt={game.title} className="modal-cover-img" decoding="async" />
           <div className="modal-header-gradient"></div>
           
           <div className="modal-header-badges">
             <span className="badge-genre">{game.genre}</span>
-            <span className="badge-rating">
-              <Star size={14} className="star-icon" /> {game.rating} / 5.0
-            </span>
           </div>
 
           <div className="modal-header-info">
@@ -89,7 +86,6 @@ export default function GameModal({ game, onClose, onSelectPass }) {
           {/* Key Game Features */}
           <div className="modal-features-section">
             <h4 className="features-title">
-              <Sparkles size={16} className="text-accent-blue" />
               Game Highlights & Features
             </h4>
             <div className="modal-features-grid">

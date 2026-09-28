@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { X, Sparkles, Check, ShieldCheck, Gamepad2, ArrowRight } from "lucide-react";
+import { X, Check, ShieldCheck, Gamepad2, ArrowRight } from "lucide-react";
 
 /**
  * TrialModal Component
@@ -71,9 +71,6 @@ export default function TrialModal({ isOpen, onClose, selectedPlan }) {
         {step === 1 ? (
           <div>
             <div className="trial-modal-header">
-              <div className="trial-icon-badge">
-                <Sparkles size={24} className="text-accent-yellow" />
-              </div>
               <h2 className="trial-title">Start Your 14-Day Free Trial</h2>
               <p className="trial-sub">
                 No upfront payment required. Instant access to certified Pinoy indie games.

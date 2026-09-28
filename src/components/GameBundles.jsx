@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import BundleModal from "./BundleModal";
+import { lazy, Suspense, useState } from "react";
 import { 
   Package, 
-  Sparkles, 
   Tag, 
   Check, 
   ArrowRight, 
@@ -13,6 +11,8 @@ import {
   Plus, 
   CheckCircle2 
 } from "lucide-react";
+
+const BundleModal = lazy(() => import("./BundleModal"));
 
 /**
  * GameBundles Component
@@ -82,7 +82,6 @@ export default function GameBundles({ bundles, allGames, onExplorePass }) {
             className={`mode-btn ${!showCustomBuilder ? "active" : ""}`}
             onClick={() => setShowCustomBuilder(false)}
           >
-            <Sparkles size={16} />
             <span>Featured Seasonal Bundles</span>
           </button>
           <button
@@ -132,6 +131,8 @@ export default function GameBundles({ bundles, allGames, onExplorePass }) {
                 src={activeBundle.bannerImage}
                 alt={activeBundle.title}
                 className="bundle-hero-img"
+                loading="lazy"
+                decoding="async"
               />
               <div className="bundle-hero-overlay">
                 <div className="bundle-badge-row">
@@ -173,7 +174,7 @@ export default function GameBundles({ bundles, allGames, onExplorePass }) {
                     <span>Purchase Bundle (₱{activeBundle.bundlePrice})</span>
                   </button>
                   <p className="deal-pass-subtext">
-                    ⭐ {activeBundle.lahiPlayPerk}
+                    {activeBundle.lahiPlayPerk}
                   </p>
                 </div>
               </div>
@@ -189,7 +190,7 @@ export default function GameBundles({ bundles, allGames, onExplorePass }) {
                   {activeBundleGames.map((game) => (
                     <div key={game.id} className="bundle-game-item-card">
                       <div className="item-thumb-box">
-                        <img src={game.image} alt={game.title} className="item-thumb-img" />
+                        <img src={game.image} alt={game.title} className="item-thumb-img" loading="lazy" decoding="async" />
                         <span className="item-genre-tag">{game.genre}</span>
                       </div>
                       <div className="item-info">
@@ -260,7 +261,7 @@ export default function GameBundles({ bundles, allGames, onExplorePass }) {
                     onClick={() => toggleCustomGame(game.id)}
                   >
                     <div className="selector-image-wrap">
-                      <img src={game.image} alt={game.title} className="selector-img" />
+                      <img src={game.image} alt={game.title} className="selector-img" loading="lazy" decoding="async" />
                       <div className="selector-check">
                         {isSelected ? (
                           <CheckCircle2 size={20} className="check-icon-active" />
@@ -330,12 +331,14 @@ export default function GameBundles({ bundles, allGames, onExplorePass }) {
 
       {/* Checkout Modal */}
       {checkoutBundle && (
-        <BundleModal
-          bundle={checkoutBundle}
-          includedGames={getGamesForBundle(checkoutBundle.gameIds)}
-          onClose={() => setCheckoutBundle(null)}
-          onExplorePass={onExplorePass}
-        />
+        <Suspense fallback={null}>
+          <BundleModal
+            bundle={checkoutBundle}
+            includedGames={getGamesForBundle(checkoutBundle.gameIds)}
+            onClose={() => setCheckoutBundle(null)}
+            onExplorePass={onExplorePass}
+          />
+        </Suspense>
       )}
     </section>
   );

@@ -5,7 +5,6 @@ import {
   Mail, 
   MapPin, 
   MessageSquare, 
-  Sparkles, 
   AlertCircle, 
   Headphones, 
   Gamepad2, 

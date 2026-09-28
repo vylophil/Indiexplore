@@ -1,61 +1,57 @@
 /* ==========================================================================
    Indiexplore Design System & Core Styles
-   Activity 4 Brand Palette:
-   - Primary: Electric Blue (#0052FF)
-   - Secondary: Neon Yellow/Gold (#FFC700)
-   - Accent: Crimson Red (#E60000)
-   - Backgrounds: Dark Charcoal (#121212) & Deep Void (#080a0f)
+  Minimal storefront palette: graphite, quiet surfaces, and a restrained mint accent.
    ========================================================================== */
 
 :root {
   /* Color Tokens */
-  --color-primary: #0052ff;
-  --color-primary-hover: #1f69ff;
-  --color-primary-glow: rgba(0, 82, 255, 0.35);
+  --color-primary: #79b98b;
+  --color-primary-hover: #91c99f;
+  --color-primary-glow: rgba(121, 185, 139, 0.15);
 
-  --color-secondary: #ffc700;
-  --color-secondary-hover: #ffd633;
-  --color-secondary-glow: rgba(255, 199, 0, 0.3);
+  --color-secondary: #d7b66b;
+  --color-secondary-hover: #e3c783;
+  --color-secondary-glow: rgba(215, 182, 107, 0.12);
 
-  --color-crimson: #e60000;
-  --color-crimson-hover: #ff1a1a;
-  --color-crimson-glow: rgba(230, 0, 0, 0.35);
+  --color-crimson: #d77970;
+  --color-crimson-hover: #e68a80;
+  --color-crimson-glow: rgba(215, 121, 112, 0.12);
 
   /* Neutrals & Surfaces */
-  --bg-deep: #07090e;
-  --bg-dark: #0e121a;
-  --bg-surface: #141924;
-  --bg-surface-elevated: #1b2232;
-  --bg-surface-translucent: rgba(20, 25, 36, 0.75);
+  --bg-deep: #111412;
+  --bg-dark: #171b18;
+  --bg-surface: #1b201c;
+  --bg-surface-elevated: #232923;
+  --bg-surface-translucent: rgba(27, 32, 28, 0.94);
 
   /* Borders & Dividers */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-light: rgba(255, 255, 255, 0.15);
-  --border-glow-blue: rgba(0, 82, 255, 0.4);
-  --border-glow-yellow: rgba(255, 199, 0, 0.4);
+  --border-subtle: rgba(236, 241, 235, 0.08);
+  --border-light: rgba(236, 241, 235, 0.14);
+  --border-glow-blue: rgba(121, 185, 139, 0.24);
+  --border-glow-yellow: rgba(215, 182, 107, 0.24);
 
   /* Typography */
-  --text-main: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-inverse: #07090e;
+  --text-main: #edf1eb;
+  --text-secondary: #aab3aa;
+  --text-muted: #7d887e;
+  --text-inverse: #111412;
 
   --font-heading: "Space Grotesk", "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Layout & Spacing */
-  --container-max: 1240px;
+  --container-max: 1320px;
   --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
-  --shadow-glow-blue: 0 0 25px rgba(0, 82, 255, 0.3);
-  --shadow-glow-yellow: 0 0 25px rgba(255, 199, 0, 0.25);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.14);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.28);
+  --shadow-glow-blue: none;
+  --shadow-glow-yellow: none;
 
   /* Transitions */
   --transition-fast: 0.18s ease;
@@ -78,14 +74,9 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--bg-deep);
-  background-image: 
-    radial-gradient(circle at 15% 10%, rgba(0, 82, 255, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 85% 60%, rgba(255, 199, 0, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 50% 90%, rgba(230, 0, 0, 0.07) 0%, transparent 40%);
-  background-attachment: fixed;
   color: var(--text-main);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -128,9 +119,7 @@ button, input, select, textarea {
 }
 
 .text-gradient-electric {
-  background: linear-gradient(135deg, #0052ff 0%, #00d2ff 50%, #ffc700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
 }
 
 .font-mono {
@@ -149,15 +138,15 @@ button, input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  background: rgba(0, 82, 255, 0.12);
-  border: 1px solid rgba(0, 82, 255, 0.3);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
   font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
-  color: #60a5fa;
+  color: var(--color-primary);
   margin-bottom: 16px;
 }
 
@@ -183,7 +172,7 @@ button, input, select, textarea {
   font-weight: 600;
   font-size: 0.95rem;
   padding: 12px 24px;
-  border-radius: var(--radius-md);
+  border-radius: 5px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -192,16 +181,17 @@ button, input, select, textarea {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #003acc 100%);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 18px var(--color-primary-glow);
+  background: var(--color-primary);
+  color: #111812;
+  border-color: var(--color-primary);
+  box-shadow: none;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--color-primary-hover) 0%, #0045e6 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px var(--color-primary-glow);
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: none;
 }
 
 .btn-secondary {

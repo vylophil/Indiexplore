@@ -4,7 +4,7 @@ import {
   Rocket, 
   Shirt, 
   Users2, 
-  Sparkles, 
+  Package, 
   Check, 
   ArrowRight 
 } from "lucide-react";
@@ -25,8 +25,8 @@ export default function ProductCard({ product, onSelectService, isSelected }) {
         return <Shirt size={24} className="product-icon-svg" />;
       case "Users2":
         return <Users2 size={24} className="product-icon-svg" />;
-      case "Sparkles":
-        return <Sparkles size={24} className="product-icon-svg" />;
+      case "Package":
+        return <Package size={24} className="product-icon-svg" />;
       default:
         return <Gamepad2 size={24} className="product-icon-svg" />;
     }

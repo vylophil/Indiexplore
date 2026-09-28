@@ -1,18 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { 
-  Play, 
   Gamepad2, 
-  Sparkles, 
   ShieldCheck, 
   Users, 
-  MapPin, 
   Target, 
-  Flame, 
-  Volume2, 
-  VolumeX, 
   Info,
   CheckCircle2,
-  ChevronRight
+  Search,
+  Coins
 } from "lucide-react";
 
 /**
@@ -21,10 +16,6 @@ import {
  * Problem Solved statement, and Target Audience breakdown.
  */
 export default function BusinessProfile({ businessInfo, onStartTrial, onExploreCatalog }) {
-  const [isPlayingTeaser, setIsPlayingTeaser] = useState(false);
-  // UI placeholder toggle — will control a real <video> element once trailer media is integrated
-  const [isMuted, setIsMuted] = useState(true);
-
   return (
     <section id="overview" className="business-profile-section">
       {/* Hero Banner / High Energy Showcase */}
@@ -32,7 +23,6 @@ export default function BusinessProfile({ businessInfo, onStartTrial, onExploreC
         <div className="hero-content">
           <div className="hero-badge">
             <span className="badge-flag-pip"></span>
-            <Sparkles size={14} className="text-accent-yellow" />
             <span>The Philippines' 1st Indie Game Subscription Pass</span>
           </div>
 
@@ -57,8 +47,8 @@ export default function BusinessProfile({ businessInfo, onStartTrial, onExploreC
               className="btn btn-primary btn-lg"
               onClick={onStartTrial}
             >
-              <Sparkles size={18} className="btn-icon" />
-              <span>Start Your Free Trial — Play Local Games Today</span>
+              <Coins size={18} className="btn-icon" aria-hidden="true" />
+              <span>Start free trial</span>
             </button>
             <a
               href="#catalog"
@@ -66,7 +56,7 @@ export default function BusinessProfile({ businessInfo, onStartTrial, onExploreC
               onClick={onExploreCatalog}
             >
               <Gamepad2 size={18} className="btn-icon" />
-              <span>Browse 30+ Game Titles</span>
+              <span>Browse games</span>
             </a>
           </div>
 
@@ -87,76 +77,6 @@ export default function BusinessProfile({ businessInfo, onStartTrial, onExploreC
           </div>
         </div>
 
-        {/* Video / High-Energy Gameplay Banner Teaser Card */}
-        <div className="hero-visual-wrapper">
-          <div className="game-trailer-card">
-            <div className="trailer-header">
-              <div className="window-dots">
-                <span className="dot dot-red"></span>
-                <span className="dot dot-yellow"></span>
-                <span className="dot dot-blue"></span>
-              </div>
-              <span className="trailer-badge">
-                <span className="live-indicator"></span> GAME OF THE MONTH TRAILER
-              </span>
-              <button 
-                type="button" 
-                className="trailer-audio-btn" 
-                onClick={() => setIsMuted(!isMuted)}
-                title={isMuted ? "Unmute sound" : "Mute sound"}
-              >
-                {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
-              </button>
-            </div>
-
-            <div className="trailer-media-frame">
-              <img
-                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
-                alt="Filipino Indie Game Diwata's Curse Gameplay Trailer Preview"
-                className="trailer-poster-image"
-              />
-              <div className="trailer-overlay">
-                <div className="trailer-center-action">
-                  <button
-                    type="button"
-                    className={`trailer-play-pulse-btn ${isPlayingTeaser ? "playing" : ""}`}
-                    onClick={() => setIsPlayingTeaser(!isPlayingTeaser)}
-                    aria-label="Toggle trailer video preview"
-                  >
-                    <Play size={28} className="play-icon" />
-                  </button>
-                  <p className="trailer-prompt">
-                    {isPlayingTeaser ? "Streaming 'Diwata's Curse' Alpha..." : "Click to Preview Gameplay Clip"}
-                  </p>
-                </div>
-
-                <div className="trailer-footer-caption">
-                  <div>
-                    <h4 className="caption-game-title">Diwata's Curse: Echoes of Bathala</h4>
-                    <p className="caption-game-dev">By Anito Studios • Cebu City, Philippines</p>
-                  </div>
-                  <span className="resolution-badge">4K 60FPS</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Live Bar */}
-            <div className="trailer-status-bar">
-              <div className="status-item">
-                <span className="status-label">Engine:</span>
-                <span className="status-value">Unreal Engine 5</span>
-              </div>
-              <div className="status-item">
-                <span className="status-label">Launch Status:</span>
-                <span className="status-value text-accent-yellow">Day-One Pass Title</span>
-              </div>
-              <div className="status-item">
-                <span className="status-label">Community Rating:</span>
-                <span className="status-value text-accent-blue">★ 4.9 / 5.0</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Numerical Impact Highlights Grid */}
@@ -188,7 +108,7 @@ export default function BusinessProfile({ businessInfo, onStartTrial, onExploreC
         {/* Card 1: Business Identity & Slogan Deep Dive */}
         <div className="profile-card brand-meaning-card">
           <div className="card-header-icon">
-            <Sparkles className="text-accent-blue" size={26} />
+            <Search size={22} aria-hidden="true" />
           </div>
           <span className="card-kicker">Business Identity & Philosophy</span>
           <h3 className="card-heading">Why "Indiexplore"?</h3>

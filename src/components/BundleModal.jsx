@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { X, Check, ShieldCheck, Download, Sparkles, Gamepad2, ArrowRight } from "lucide-react";
+import { X, Check, ShieldCheck, Download, Gamepad2, ArrowRight } from "lucide-react";
 
 /**
  * BundleModal Component
@@ -77,7 +77,7 @@ export default function BundleModal({ bundle, includedGames, onClose, onExploreP
               <div className="bundle-games-pill-row">
                 {includedGames.map((g) => (
                   <div key={g.id} className="bundle-game-pill">
-                    <img src={g.image} alt={g.title} className="pill-thumb" />
+                    <img src={g.image} alt={g.title} className="pill-thumb" decoding="async" />
                     <span>{g.title}</span>
                   </div>
                 ))}
@@ -127,7 +127,6 @@ export default function BundleModal({ bundle, includedGames, onClose, onExploreP
                   </span>
                 ) : (
                   <>
-                    <Sparkles size={16} />
                     <span>Complete Bundle Order • ₱{bundle.bundlePrice}</span>
                   </>
                 )}

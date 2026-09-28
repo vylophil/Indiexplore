@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Check, Sparkles, Zap, Shield, HelpCircle, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Check, Zap, Shield, HelpCircle, ArrowRight, CheckCircle2 } from "lucide-react";
 
 /**
  * SubscriptionPlans Component
@@ -32,7 +32,6 @@ export default function SubscriptionPlans({ plans, onSelectPlan }) {
     <section id="pricing" className="subscription-plans-section">
       <div className="section-header">
         <div className="section-kicker">
-          <Sparkles size={14} className="text-accent-yellow" />
           <span>Membership Tiers</span>
         </div>
         <h2 className="section-title">

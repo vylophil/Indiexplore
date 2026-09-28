@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import GameCard from "./GameCard";
-import GameModal from "./GameModal";
-import { Gamepad2, Sparkles, Trophy, Flame } from "lucide-react";
+import { Gamepad2, Trophy, Flame } from "lucide-react";
+
+const GameModal = lazy(() => import("./GameModal"));
 
 /**
  * GameShowcase Component
@@ -51,6 +52,8 @@ export default function GameShowcase({ games, onSelectPass }) {
               src={spotlightGame.image}
               alt={spotlightGame.title}
               className="spotlight-banner-img"
+              loading="lazy"
+              decoding="async"
             />
             <div className="spotlight-overlay-tag">
               <Flame size={16} className="text-accent-red" />
@@ -68,7 +71,6 @@ export default function GameShowcase({ games, onSelectPass }) {
             <div className="spotlight-bullets">
               {spotlightGame.features.map((feat, i) => (
                 <div key={`spotlight-feat-${i}`} className="spotlight-bullet-item">
-                  <Sparkles size={14} className="text-accent-yellow" />
                   <span>{feat}</span>
                 </div>
               ))}
@@ -121,14 +123,16 @@ export default function GameShowcase({ games, onSelectPass }) {
 
       {/* Modal Popup for Selected Game */}
       {activeGameModal && (
-        <GameModal
-          game={activeGameModal}
-          onClose={() => setActiveGameModal(null)}
-          onSelectPass={() => {
-            setActiveGameModal(null);
-            onSelectPass();
-          }}
-        />
+        <Suspense fallback={null}>
+          <GameModal
+            game={activeGameModal}
+            onClose={() => setActiveGameModal(null)}
+            onSelectPass={() => {
+              setActiveGameModal(null);
+              onSelectPass();
+            }}
+          />
+        </Suspense>
       )}
     </section>
   );

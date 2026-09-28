@@ -120,7 +120,7 @@ export const productsAndServices = [
     title: "Early Access & Beta Testing Access",
     badge: "VIP Tier Perk",
     featured: true,
-    icon: "Sparkles",
+    icon: "Package",
     shortDescription:
       "Special tier perk allowing subscriber feedback during a local game's developmental phase.",
     fullDescription:
@@ -196,7 +196,7 @@ export const showcaseGames = [
     genre: "Action RPG",
     rating: "4.9",
     tags: ["Filipino Mythology", "Fast Combat", "Atmospheric"],
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=640&q=75",
     description:
       "An action-packed mythological hack-and-slash set deep within ancient Philippine forests. Wield elemental swords forged by Bathala and vanquish corrupted tikbalangs and engkantos.",
     features: ["Mythology-rich narrative", "60 FPS fluid hack-and-slash", "Original Kulintang synth soundtrack"],
@@ -210,7 +210,7 @@ export const showcaseGames = [
     genre: "Psychological Horror",
     rating: "4.8",
     tags: ["Urban Legend", "Survival Horror", "Story Rich"],
-    image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=640&q=75",
     description:
       "You are a nocturnal ride-hailing driver navigating the eerie streets of New Manila. Uncover dark secrets along Balete Drive as supernatural hitchhikers test your sanity.",
     features: ["Binaural 3D audio design", "Multiple branching endings", "Authentic jeepney & street aesthetics"],
@@ -224,7 +224,7 @@ export const showcaseGames = [
     genre: "Arcade Racing",
     rating: "4.7",
     tags: ["Retro Pixel", "High Octane", "Multiplayer"],
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=640&q=75",
     description:
       "Tear up EDSA and provincial mountain passes in ultra-customized Philippine jeepneys equipped with nitro boosters, neon lights, and blasting budots basslines.",
     features: ["Local 4-player splitscreen", "Deep jeepney visual customization", "Chiptune OPM remixes"],
@@ -238,7 +238,7 @@ export const showcaseGames = [
     genre: "Cozy Sim",
     rating: "4.9",
     tags: ["Cozy Simulation", "Cultural", "Chill"],
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=640&q=75",
     description:
       "Inherit your grandmother's beloved neighborhood sari-sari store in a sun-drenched coastal barangay. Brew iced coffee, gossip with colorful neighbors, and revitalize the community.",
     features: ["Relaxing day-night loop", "Over 100 authentic local snacks & goods", "Heartwarming character stories"],
@@ -252,7 +252,7 @@ export const showcaseGames = [
     genre: "Cyberpunk Roguelite",
     rating: "4.8",
     tags: ["Cyberpunk", "Deckbuilder", "Roguelite"],
-    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=640&q=75",
     description:
       "Set in Neo-Maynila 2088. Hack into mega-corporation databanks by fusing mystical indigenous talismans (Anting-Anting) with cybernetic deckbuilding augments.",
     features: ["Synergistic talisman deckbuilding", "Procedural cyber-dungeons", "Gritty neon-lit aesthetic"],
@@ -266,7 +266,7 @@ export const showcaseGames = [
     genre: "Metroidvania",
     rating: "4.9",
     tags: ["2D Platformer", "Rich Lore", "Hand-Drawn"],
-    image: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=640&q=75",
     description:
       "A hand-drawn 2D metroidvania chronicling the eternal tragic love story of Daragang Magayon. Traverse lava caverns and cloud peaks using wind and flame dash abilities.",
     features: ["Hand-painted Filipino art style", "Fluid precision platforming", "Epic multi-phase boss battles"],
@@ -280,7 +280,7 @@ export const showcaseGames = [
     genre: "Action-Adventure",
     rating: "4.8",
     tags: ["Student Project", "Archaeology", "Puzzles"],
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=640&q=75",
     description:
       "A high-praise student capstone project. Unravel ancient pre-colonial indigenous script and solve environmental water puzzles in hidden subterranean caves.",
     features: ["Pre-colonial Baybayin cipher mechanics", "Lush cave lighting", "Winner of Best Student Game 2026"],
@@ -294,7 +294,7 @@ export const showcaseGames = [
     genre: "Arcade Beat 'em Up",
     rating: "4.7",
     tags: ["Student Project", "Pixel Art", "Retro"],
-    image: "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=640&q=75",
     description:
       "A nostalgic 90s-style arcade brawler set in neighborhood basketball courts and fiesta streets. Team up with friends and wield slippers, monobloc chairs, and arnis sticks!",
     features: ["Retro 16-bit sprites", "Local 2-player co-op", "Hilarious sound effects & street banter"],
@@ -311,7 +311,7 @@ export const gameBundles = [
     badge: "Summer Special • 65% OFF",
     season: "Summer Edition 2026",
     tagline: "Beat the tropical heat with 4 top-rated Philippine indie masterpieces in one high-value pack!",
-    bannerImage: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+    bannerImage: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1000&q=75",
     gameIds: ["game-1", "game-3", "game-4", "game-6"],
     originalPrice: 1346,
     bundlePrice: 469,
@@ -332,7 +332,7 @@ export const gameBundles = [
     badge: "Mythology Collector • 55% OFF",
     season: "Folklore & Horror Collection",
     tagline: "Encounter ancient diwatas, cursed balete drives, and volcanic deities of Bicol.",
-    bannerImage: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
+    bannerImage: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=75",
     gameIds: ["game-1", "game-2", "game-6"],
     originalPrice: 1047,
     bundlePrice: 469,
@@ -352,7 +352,7 @@ export const gameBundles = [
     badge: "Adrenaline Pack • 50% OFF",
     season: "Fast-Paced & Competitive",
     tagline: "Drift neon jeepneys across EDSA and hack mega-corporation databanks with mystical agimat.",
-    bannerImage: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1200&q=80",
+    bannerImage: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1000&q=75",
     gameIds: ["game-3", "game-5"],
     originalPrice: 698,
     bundlePrice: 349,
@@ -372,7 +372,7 @@ export const gameBundles = [
     badge: "Student Grant • 60% OFF",
     season: "Student Creator Special",
     tagline: "Outstanding capstone projects and debut titles from student developers across PH universities.",
-    bannerImage: "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1200&q=80",
+    bannerImage: "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=1000&q=75",
     gameIds: ["game-4", "game-7", "game-8"],
     originalPrice: 647,
     bundlePrice: 259,
